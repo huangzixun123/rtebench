@@ -80,7 +80,7 @@ func (o *CPUOptions) run(client *cri.Client) (string, error) {
 	var (
 		sandboxID   = util.NewUUID()
 		containerID = util.NewUUID()
-		image       = "lnsp/sysbench:latest"
+		image       = "severalnines/sysbench:latest"
 	)
 
 	if err := client.PullImage(image, nil); err != nil {
